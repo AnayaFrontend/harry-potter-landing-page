@@ -1,11 +1,16 @@
-import { Hero } from "./components/Hero/Hero";
 import "./styles/global.scss";
+import { Hero } from "./components/Hero/Hero";
+import { CharactersGrid } from "./components/CharactersGrid/CharactersGrid";
 
 function App() {
   return (
-    <div>
+    <>
       <Hero />
-    </div>
+
+      <main>
+        <CharactersGrid />
+      </main>
+    </>
   );
 }
 
