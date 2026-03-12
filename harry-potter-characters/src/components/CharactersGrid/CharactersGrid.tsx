@@ -1,11 +1,16 @@
 import "./CharactersGrid.scss";
-import { usePersonagens } from "../../hooks/usePersonagens";
 import { CharacterCard } from "../CharacterCard/CharacterCard";
+import type { Personagem } from "../../types/Personagem";
 
-export function CharactersGrid() {
-  const dados = usePersonagens();
-  const { personagens, carregando } = dados || {};
+interface CharactersGridProps {
+  personagens: Personagem[];
+  carregando: boolean;
+}
 
+export function CharactersGrid({
+  personagens = [],
+  carregando,
+}: CharactersGridProps) {
   if (carregando) {
     return <p className="loading">Carregando personagens...</p>;
   }

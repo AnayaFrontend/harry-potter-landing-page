@@ -22,6 +22,13 @@ export function CharacterCard({
   const imagemUrl =
     imagem || "https://via.placeholder.com/300x450?text=Sem+Imagem";
 
+  const nomesCasas: { [key: string]: string } = {
+    Gryffindor: "Grifinória",
+    Slytherin: "Sonserina",
+    Ravenclaw: "Corvinal",
+    Hufflepuff: "Lufa-Lufa",
+  };
+
   return (
     <div className="card-personagem">
       <div className="card-personagem__imagem">
@@ -36,7 +43,7 @@ export function CharacterCard({
         </p>
 
         <p>
-          <strong>Casa:</strong> {casa || "Desconhecida"}
+          <strong>Casa:</strong> {nomesCasas[casa] || casa || "Desconhecida"}
         </p>
 
         <p>
