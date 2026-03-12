@@ -1,7 +1,27 @@
 import "./Hero.scss";
 import bruxa from "../../assets/bruxa-voando.png";
 
-export function Hero() {
+interface HeroProps {
+  busca: string;
+  setBusca: (valor: string) => void;
+  filtroCasa: string;
+  setFiltroCasa: (valor: string) => void;
+}
+
+export function Hero({
+  busca,
+  setBusca,
+  filtroCasa,
+  setFiltroCasa,
+}: HeroProps) {
+  const casas = [
+    { label: "Todos", value: "" },
+    { label: "Grifinória", value: "Gryffindor" },
+    { label: "Sonserina", value: "Slytherin" },
+    { label: "Corvinal", value: "Ravenclaw" },
+    { label: "Lufa-Lufa", value: "Hufflepuff" },
+  ];
+
   return (
     <section className="hero">
       {/* Bruxa voando */}
@@ -18,17 +38,26 @@ export function Hero() {
         </p>
 
         <div className="hero__filtros">
-          <button className="ativo">Todos</button>
-          <button>Grifinória</button>
-          <button>Sonserina</button>
-          <button>Corvinal</button>
-          <button>Lufa-Lufa</button>
+          {casas.map((casa) => (
+            <button
+              key={casa.label}
+              className={filtroCasa === casa.value ? "ativo" : ""}
+              onClick={() => setFiltroCasa(casa.value)}
+            >
+              {casa.label}
+            </button>
+          ))}
         </div>
 
         {/* Campo de busca */}
         <div className="hero__busca">
           <span className="hero__icone">🔎</span>
-          <input type="text" placeholder="Buscar personagem..." />
+          <input
+            type="text"
+            placeholder="Buscar personagem..."
+            value={busca}
+            onChange={(e) => setBusca(e.target.value)}
+          />
         </div>
       </div>
     </section>
