@@ -4,6 +4,17 @@
 
 ---
 
+<img width="1348" height="648" alt="image" src="https://github.com/user-attachments/assets/1e9ad5f5-740c-4fe4-95e1-64a9cb3ed021" />
+
+## 🔗 Demonstração
+
+O projeto está disponível online através da Vercel:
+
+👉 **[Acesse o Projeto Aqui](https://harry-potter-landing-page-tgp7.vercel.app/)**
+
+<img width="1348" height="648" alt="image" src="https://github.com/user-attachments/assets/1e9ad5f5-740c-4fe4-95e1-64a9cb3ed021" />
+
+
 ## 📖 Sobre o Projeto
 
 Este projeto é uma **Landing Page imersiva** desenvolvida para listar e filtrar personagens da saga Harry Potter. O objetivo foi criar uma interface mágica, responsiva e performática, consumindo dados de uma API pública.
