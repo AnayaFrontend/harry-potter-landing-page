@@ -51,7 +51,6 @@ export function Hero({
 
         {/* Campo de busca */}
         <div className="hero__busca">
-          <span className="hero__icone">🔎</span>
           <input
             type="text"
             placeholder="Buscar personagem..."

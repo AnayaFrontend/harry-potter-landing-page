@@ -2,74 +2,83 @@
 
 .card-personagem {
    width: 240px;
-
    background: rgba(31, 35, 51, 0.9);
-
    border-radius: 14px;
-
    overflow: hidden;
-
    transition: all 0.3s ease;
-
    border: 1px solid transparent;
-
    backdrop-filter: blur(6px);
 
-   cursor: pointer;
-}
+   @media (max-width: 768px) {
+      width: 100%;
+      max-width: 200px;
+   }
 
-/* Fotos dos personagens */
+   /* Fotos dos personagens */
+   &__imagem {
+      height: 260px;
+      overflow: hidden;
 
-.card-personagem__imagem {
-   height: 260px;
-   overflow: hidden;
-}
+      @media (max-width: 768px) {
+         height: auto;
+      }
 
-.card-personagem__imagem img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   object-position: top;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: top;
+         transition: transform 0.4s;
 
-   transition: transform 0.4s;
-}
+         @media (max-width: 768px) {
+            height: auto;
+         }
+      }
+   }
 
-.card-personagem__conteudo {
-   padding: 16px;
-   text-align: center;
-}
+   &__conteudo {
+      padding: 16px;
+      text-align: center;
 
-/* Nomes dos personagens */
+      @media (max-width: 768px) {
+         padding: 12px;
+      }
 
-.card-personagem__conteudo h3 {
-   font-family: "Cinzel", serif;
-   font-size: 18px;
-   margin-bottom: 6px;
-}
+      /* Nomes dos personagens */
+      h3 {
+         font-family: "Cinzel", serif;
+         font-size: 18px;
+         margin-bottom: 6px;
 
-/* Dados dos personagens */
+         @media (max-width: 768px) {
+            font-size: 16px;
+         }
+      }
 
-.card-personagem__conteudo p {
-   font-family: "Crimson Text", serif;
-   font-size: 15px;
-   color: #d1d5db;
-   text-transform: none !important;
-   line-height: 1.4;
-}
+      /* Dados dos personagens */
+      p {
+         font-family: "Crimson Text", serif;
+         font-size: 15px;
+         color: #ede9decc;
+         text-transform: none !important;
+         line-height: 1.4;
 
-/* Efeito hover de brilho dourado */
+         @media (max-width: 768px) {
+            font-size: 13px;
+         }
+      }
+   }
 
-.card-personagem:hover {
-   transform: translateY(-6px);
+   /* Efeito hover de brilho dourado */
+   &:hover {
+      transform: translateY(-6px);
+      border-color: #e6b325;
+      box-shadow: 0 0 8px rgba(230, 179, 37, 0.6),
+         0 0 18px rgba(230, 179, 37, 0.4),
+         0 0 30px rgba(230, 179, 37, 0.2);
 
-   border-color: #e6b325;
-
-   box-shadow:
-      0 0 8px rgba(230, 179, 37, 0.6),
-      0 0 18px rgba(230, 179, 37, 0.4),
-      0 0 30px rgba(230, 179, 37, 0.2);
-}
-
-.card-personagem:hover img {
-   transform: scale(1.08);
+      img {
+         transform: scale(1.08);
+      }
+   }
 }
